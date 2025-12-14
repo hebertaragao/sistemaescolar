@@ -1,0 +1,4 @@
+flet
+reportLab
+sqlite3
+bcrypt
