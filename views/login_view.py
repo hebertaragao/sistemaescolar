@@ -1,3 +1,4 @@
+import flet as ft
 from controllers.auth_controller import login
 from views.admin_view import admin_view
 from views.teacher_view import teacher_view
@@ -18,10 +19,11 @@ def login_view(page: ft.Page):
                 teacher_view(page)
             else:
                 student_view(page)
-                page.update()
+            page.update()
         else:
             message.value = result["message"]
             page.update()
+
     page.add(
         ft.Column([
             ft.Text("Login - Sistema Escolar", size=20, weight="bold"),
@@ -29,5 +31,5 @@ def login_view(page: ft.Page):
             password,
             ft.ElevatedButton("Entrar", on_click=handle_login),
             message
-            ], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
+        ], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
     )

@@ -3,7 +3,7 @@ from controllers.teacher_controller import lancar_nota, lancar_falta
 
 def teacher_view(page: ft.Page):
     student_id = ft.TextField(label="ID do Aluno")
-    subject_id = ft.TextField(labek="ID da Disciplina")
+    subject_id = ft.TextField(label="ID da Disciplina")
     grade = ft.TextField(label="Nota")
     msg = ft.Text("")
 

@@ -7,5 +7,5 @@ def gerar_boletim(aluno, notas):
     y = 750
     for disciplina, nota in notas.items():
         c.drawString(100, y, f"{disciplina}: {nota}")
-        y -= 30 
+        y -= 30
     c.save()
