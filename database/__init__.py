@@ -61,4 +61,6 @@ def init_db():
     
     conn.commit()
     conn.close()
-    
+    # Inicialização do módulo de banco de dados
+from .connection import get_connection
+from .init_db import init_db
